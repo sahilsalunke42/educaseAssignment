@@ -176,6 +176,8 @@ app.get('/listSchools', async function (req, res) {
 
 
 
-app.listen(8000, function () {
-    console.log('server running on port 8000');
+const port = process.env.PORT ?? 8000;
+
+app.listen(port, function () {
+    console.log(`server running on port ${port}`);
 });
